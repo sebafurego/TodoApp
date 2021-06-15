@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
+import AppHeader from './components/app-header';
+import SearchPanel from './components/search-panel';
+import TodoList from './components/todo-list';
+
+const App = () => {
+
+  const todoData = [
+    {label: 'Drink Coffee', important: false, id: 1},
+    {label: 'Make Awesome App', important: true, id: 2},
+    {label: 'Have a lunch', important: false, id: 3},
+  ]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AppHeader />
+      <SearchPanel />
+      <TodoList todos={todoData} />
     </div>
   );
-}
+};
 
 export default App;

@@ -16,7 +16,9 @@ const App = () => {
     <div className="container">
       <AppHeader />
       <SearchPanel />
-      <TodoList todos={todoData} />
+      <TodoList 
+        todos={todoData} 
+        onDeleted={(id) => console.log('Deleted', id)}/>
     </div>
   );
 };

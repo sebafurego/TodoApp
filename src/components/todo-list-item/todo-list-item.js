@@ -23,12 +23,10 @@ export default class TodoListItem extends Component {
           className="flex-fill"
           onClick={onToggleDone}
         >{ label }</span>
-        <button 
-          type="button" 
+        <button
           className="btn btn-outline-secondary btn-sm"
           onClick={onDeleted}><i className="fas fa-trash-alt"></i></button>
-        <button 
-          type="button" 
+        <button
           className="btn btn-outline-secondary ms-2 btn-sm"
           onClick={onToggleImportant}
         ><i className="far fa-lightbulb"></i></button>

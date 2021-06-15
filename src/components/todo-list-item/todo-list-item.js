@@ -3,30 +3,8 @@ import './todo-list-item.css';
 
 export default class TodoListItem extends Component {
 
-  state = { 
-    done: false,
-    important: false
-  };
-
-  onLabelClick = () => {
-    this.setState(({done}) => {
-      return {
-        done: !done
-      };
-    });
-  };
-
-  onMarkImportant = () => {
-    this.setState(({important}) => {
-      return {
-        important: !important
-      };
-    });
-  };
-
   render () {
-    const { label, onDeleted } = this.props;
-    const { done, important } = this.state;
+    const { label, onDeleted, onToggleImportant, onToggleDone, important, done } = this.props;
 
     let classNames = 'todo-list-item d-flex align-items-center';
 
@@ -43,7 +21,7 @@ export default class TodoListItem extends Component {
       >
         <span 
           className="flex-fill"
-          onClick={this.onLabelClick}
+          onClick={onToggleDone}
         >{ label }</span>
         <button 
           type="button" 
@@ -52,7 +30,7 @@ export default class TodoListItem extends Component {
         <button 
           type="button" 
           className="btn btn-outline-secondary ms-2 btn-sm"
-          onClick={this.onMarkImportant}
+          onClick={onToggleImportant}
         ><i className="far fa-lightbulb"></i></button>
       </span>
     );

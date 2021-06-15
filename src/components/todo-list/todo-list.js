@@ -17,7 +17,7 @@ const TodoList = ({ todos, onDeleted }) => {
   });
 
   return (
-    <ul className="list-group todo-list">
+    <ul className="list-group todo-list mb-3">
       {elements}
     </ul>
   );

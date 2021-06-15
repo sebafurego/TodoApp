@@ -1,8 +1,8 @@
 import React from 'react';
 
-import AppHeader from './components/app-header';
-import SearchPanel from './components/search-panel';
-import TodoList from './components/todo-list';
+import AppHeader from '../app-header';
+import SearchPanel from '../search-panel';
+import TodoList from '../todo-list';
 
 const App = () => {
 
@@ -13,7 +13,7 @@ const App = () => {
   ]
 
   return (
-    <div>
+    <div className="container">
       <AppHeader />
       <SearchPanel />
       <TodoList todos={todoData} />

@@ -1,0 +1,7 @@
+.todo-list li {
+  padding: 12px;
+}
+.todo-list li:hover {
+  background-color: aliceblue;
+  cursor: pointer;
+}

@@ -5,3 +5,6 @@
   font-weight: bold;
   color: tomato;
 }
+.todo-list-item button {
+  width: 31px;
+}
